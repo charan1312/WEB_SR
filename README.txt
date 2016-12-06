@@ -1,1 +1,1 @@
-This project is intended to do online status reporting.
+This project is being developed to enable online status reporting.
