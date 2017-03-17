@@ -86,11 +86,11 @@
         </tr>
         <tr>
             <td><form:label path="summary">Summary/Title:</form:label></td>
-            <td><form:textarea path="summary" rows="5" cols="200" size="15" maxlength="4000"></form:textarea></td>
+            <td><form:textarea path="summary" rows="5" cols="200" size="15" maxlength="4000" required="required"></form:textarea></td>
         </tr>
         <tr>
             <td><form:label path="description">Description:</form:label></td>
-            <td><form:textarea path="description" rows="5" cols="200" size="15" maxlength="4000"></form:textarea></td>
+            <td><form:textarea path="description" rows="5" cols="200" size="15" maxlength="4000" required="required"></form:textarea></td>
         </tr>
         <tr>
             <td colspan="2"><input type="submit"
@@ -153,5 +153,30 @@
     </h3>
 </c:if>
 
+<br>
+<br>
+<br>
+<br>
+
+
+<table border="0">
+<tr>
+    <td>
+        <form:form name="HomeForm" method="post" action="/WebSR" >
+            <input type="submit" class="orange-button" value="Main Home"/>
+        </form:form>
+    </td>
+    <td>
+        <form:form name="HomeForm" action="/WebSR/updates/active" >
+            <input type="submit" class="orange-button" value="Active Home"/>
+        </form:form>
+    </td>
+</tr>
+</table>
+
+
 </body>
 </html>
+
+
+

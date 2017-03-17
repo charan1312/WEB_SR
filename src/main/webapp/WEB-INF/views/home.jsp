@@ -119,14 +119,27 @@
     </ul>
     <br>
     <br>
-    <br>
-    <br>
     <ul class="green-button">
         <div style="text-align:center; width: 75%;">
             <a href="<c:url value='/updates/inactive'/>" > Past Action Items </a>
         </div>
     </ul>
- </div>
+    <br>
+    <br>
+    <ul class="blue-button">
+        <div style="text-align:center; width: 75%;">
+            <a href="<c:url value='/updates/sigissues'/>" > Significant Issues </a>
+        </div>
+    </ul>
+    <br>
+    <br>
+    <ul class="green-button">
+        <div style="text-align:center; width: 75%;">
+            <a href="<c:url value='/updates/sigcrqs'/>" > Significant CRQs </a>
+        </div>
+    </ul>
+
+</div>
 <div style="clear:both"></div>
 <%--
     <a href="<c:url value='/updates/active'/>" > Current Action Items </a>

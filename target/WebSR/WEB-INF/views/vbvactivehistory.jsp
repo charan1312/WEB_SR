@@ -78,25 +78,45 @@
         }
 
     </style>
+
+    <script>
+
+        function validateForm() {
+            alert("In form validate");
+            var oldsum = ${newUpdate.summary};
+            var olddes = ${newUpdate.description};
+            var newsum = document.forms["UpdateItemForm"]["sumary"].value;
+            var newdes = document.forms["UpdateItemForm"]["desc"].value;
+            alert(olddes);
+            alert(newdes);
+            if (oldsum == newsum && olddes == newdes) {
+                alert("fhkdjfsdfjskdfs");
+                alert("Please Edit Either the Summary or the Description. Cannot update Without Any Changes");
+                return false;
+            }
+        }
+
+    </script>
+
 </head>
 <body>
 
-<form:form method="post" modelAttribute="newUpdate" action="/WebSR/vbv/history/add">
+<form:form name="UpdateItemForm" method="post" modelAttribute="newUpdate" action="/WebSR/vbv/history/add" onsubmit="return validateForm();">
     <table width="60%">
         <tr>
             <th colspan="2">Update Item</th>
         </tr>
         <tr>
             <td><form:label path="serialNo">Original Action Item Number:</form:label></td>
-            <td><form:input path="serialNo" size="15" maxlength="40" placeholder="${newUpdate.serialNo}" readonly="true"/> </td>
+            <td><form:input name="sno" path="serialNo" size="15" maxlength="40" placeholder="${newUpdate.serialNo}" readonly="true"/> </td>
         </tr>
         <tr>
             <td><form:label path="summary">Summary/Title:</form:label></td>
-            <td><form:textarea path="summary" rows="5" cols="200" size="15" maxlength="4000" placeholder="${newUpdate.summary}"/> </td>
+            <td><form:textarea name="sumary" path="summary" rows="5" cols="200" size="15" maxlength="4000" placeholder="${newUpdate.summary}" required="required"/> </td>
         </tr>
         <tr>
             <td><form:label path="description">Description:</form:label></td>
-            <td><form:textarea path="description" rows="5" cols="200" size="15" maxlength="4000" placeholder="${newUpdate.description}"/> </td>
+            <td><form:textarea name="desc" path="description" rows="5" cols="200" size="15" maxlength="4000" placeholder="${newUpdate.description}" required="required"/> </td>
         </tr>
         <tr>
             <td colspan="2"><input type="submit"
