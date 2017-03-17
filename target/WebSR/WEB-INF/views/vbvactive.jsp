@@ -162,12 +162,12 @@
 <table border="0">
 <tr>
     <td>
-        <form:form name="HomeForm" method="post" action="/WebSR" >
+        <form:form name="HomeForm" action="/WebSR" >
             <input type="submit" class="orange-button" value="Main Home"/>
         </form:form>
     </td>
     <td>
-        <form:form name="HomeForm" action="/WebSR/updates/active" >
+        <form:form name="HomeForm" method="get" action="/WebSR/updates/active" >
             <input type="submit" class="orange-button" value="Active Home"/>
         </form:form>
     </td>
